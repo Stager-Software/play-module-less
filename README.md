@@ -13,6 +13,8 @@ Releases up to 0.9.1 are in the official Play module repository. Since that is n
 * http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.3.zip (less-1.5.0)
 * http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.4.zip (less-1.5.1)
 * http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.5.zip (less-1.6.0)
+* http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.6.zip (less-1.6.1)
+
 
 License
 =======
