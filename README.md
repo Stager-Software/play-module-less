@@ -9,7 +9,8 @@ Releases
 
 Releases up to 0.9.1 are in the official Play module repository. Since that is now read-only, new releases are hosted elsewhere.
 
-* http://lunatech.com/play-module-less/dist/play-less-0.9.2.zip
+* http://lunatech.com/play-module-less/dist/play-less-0.9.2.zip (less-1.3.3)
+* http://http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.3.zip (less-1.5.0)
 
 License
 =======
