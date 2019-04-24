@@ -8,3 +8,7 @@ tmp
 .project
 .classpath
 .settings
+.idea/workspace.xml
+.idea/tasks.xml
+play
+less-*.zip
