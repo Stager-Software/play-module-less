@@ -64,5 +64,8 @@ public class Plugin extends PlayPlugin {
         if (useEtag) {
             response.setHeader("ETag", etag);
         }
+        if (!devMode) {
+            response.setHeader("Cache-Control", "max-age=" + Play.configuration.getProperty("http.cacheControl", "3600"));
+        }
     }
 }
