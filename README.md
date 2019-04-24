@@ -28,7 +28,20 @@ Provide the path of the Play source directory (e.g. `/usr/local/lib/play-1.5.2/`
 
 This puts a JAR file in: `lib/play-less.jar`
 
-Rename this file to `less-$VERSION.zip` and publish it to a repository (e.g. `play-module-repo.s3.amazonaws.com/play-less/less-0.9.7.zip`).
+To make the ZIP file run (for version 0.9.7.):
+
+    zip -r less-0.9.7.zip README.md build.xml documentation lib samples-and-tests src
+
+Now publish the ZIP file to a repository (e.g. `play-module-repo.s3.amazonaws.com/play-less/less-0.9.7.zip`).
+
+
+IntelliJ
+========
+
+The `.idea` folder is partly checked in into version control. To use it make sure to have a folder with the Play Framework.
+linked to `play/`. For example by executing the following command from the project root:
+
+    ln -s /usr/local/lib/play-1.5.2 play
 
 
 License
