@@ -14,6 +14,21 @@ Releases up to 0.9.1 are in the official Play module repository. Since that is n
 * http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.4.zip (less-1.5.1)
 * http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.5.zip (less-1.6.0)
 * http://jpwesselink.github.io/play-module-less/dist/play-less-0.9.6.zip (less-1.6.1)
+* https://play-module-repo.s3.amazonaws.com//play-less/less-0.9.7.zip (bug fixes)
+
+
+Build and publish
+=================
+
+This project uses the `ant` build tool. Make sure to have it installed.
+
+Provide the path of the Play source directory (e.g. `/usr/local/lib/play-1.5.2/`) and build the project with:
+
+    ant -Dplay.path=/usr/local/lib/play-1.5.2/
+
+This puts a JAR file in: `lib/play-less.jar`
+
+Rename this file to `less-$VERSION.zip` and publish it to a repository (e.g. `play-module-repo.s3.amazonaws.com/play-less/less-0.9.7.zip`).
 
 
 License
