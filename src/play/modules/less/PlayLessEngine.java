@@ -26,9 +26,9 @@ import com.asual.lesscss.LessException;
  */
 public class PlayLessEngine {
 
-    LessEngine lessEngine;
     Boolean devMode;
-    Pattern importPattern = Pattern.compile(".*@import\\s*\"(.*?)\".*");
+    private LessEngine lessEngine;
+    private Pattern importPattern = Pattern.compile(".*@import\\s*\"(.*?)\".*");
 
     PlayLessEngine(Boolean devMode) {
         lessEngine = new LessEngine();
@@ -59,9 +59,8 @@ public class PlayLessEngine {
 
     protected Set<File> getImportsFromCacheOrFile(File lessFile) {
         String cacheKey = "less_imports_" + lessFile.getPath() + lessFile.lastModified();
-
+        @SuppressWarnings("unchecked")
         Set<File> files = cacheGet(cacheKey, Set.class);
-
         if (files == null) {
             try {
                 files = getImportsFromFile(lessFile);

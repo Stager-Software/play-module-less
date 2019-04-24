@@ -12,8 +12,8 @@ import play.utils.Utils;
 import play.vfs.VirtualFile;
 
 public class Plugin extends PlayPlugin {
-    PlayLessEngine playLessEngine;
-    boolean useEtag = true;
+    private PlayLessEngine playLessEngine;
+    private boolean useEtag = true;
 
     @Override
     public void onLoad() {
@@ -64,7 +64,7 @@ public class Plugin extends PlayPlugin {
         if (useEtag) {
             response.setHeader("ETag", etag);
         }
-        if (!devMode) {
+        if (!playLessEngine.devMode) {
             response.setHeader("Cache-Control", "max-age=" + Play.configuration.getProperty("http.cacheControl", "3600"));
         }
     }
