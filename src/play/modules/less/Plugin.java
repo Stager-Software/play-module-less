@@ -65,7 +65,13 @@ public class Plugin extends PlayPlugin {
             response.setHeader("ETag", etag);
         }
         if (!playLessEngine.devMode) {
-            response.setHeader("Cache-Control", "max-age=" + Play.configuration.getProperty("http.cacheControl", "3600"));
+            // Roughly copied from `framework/src/play/server/PlayHandler.java`
+            String maxAge = Play.configuration.getProperty("http.cacheControl", "3600");
+            if (maxAge.equals("0")) {
+                response.setHeader("Cache-Control", "no-cache");
+            } else {
+                response.setHeader("Cache-Control", "max-age=" + maxAge);
+            }
         }
     }
 }
