@@ -100,7 +100,9 @@ public class PlayLessEngine {
 
     protected String compile(File lessFile) {
         try {
-            return lessEngine.compile(lessFile, !devMode);
+            // To make it minify the CSS output in production call `compile(lessFile, !devMode)`
+            // The increases the reponse time dramatically (~10x) for the first call, thus omitted.
+            return lessEngine.compile(lessFile);
         } catch (LessException e) {
             return handleException(lessFile, e);
         }
